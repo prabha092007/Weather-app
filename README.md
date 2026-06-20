@@ -1,4 +1,5 @@
 Weather App
+
 CodeAlpha Web Development Internship — Week 3 Assignment Focus: DOM manipulation, JSON parsing, API integration
 
 What it does
@@ -7,7 +8,9 @@ Search any city and get current temperature, humidity, "feels like", wind speed,
 °C / °F unit toggle
 Last 5 searched cities saved locally and shown as quick-access chips
 Clean card-based UI with a loading state and error handling for invalid cities / empty input
+
 Project structure
+
 weather-app/
 ├── index.html
 ├── style.css
