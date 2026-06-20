@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="stripes top-left">
+    <svg viewBox="0 0 100 100"><line x1="0" y1="20" x2="60" y2="-40" stroke="#c9920c" stroke-width="4" opacity="0.5"/><line x1="0" y1="40" x2="80" y2="-40" stroke="#c9920c" stroke-width="4" opacity="0.35"/><line x1="0" y1="60" x2="100" y2="-40" stroke="#c9920c" stroke-width="4" opacity="0.2"/></svg>
+  </div>
+  <div class="stripes bottom-right">
+    <svg viewBox="0 0 100 100"><line x1="0" y1="20" x2="60" y2="-40" stroke="#0f6657" stroke-width="4" opacity="0.5"/><line x1="0" y1="40" x2="80" y2="-40" stroke="#0f6657" stroke-width="4" opacity="0.35"/><line x1="0" y1="60" x2="100" y2="-40" stroke="#0f6657" stroke-width="4" opacity="0.2"/></svg>
+  </div>
+
+  <div class="app-shell">
+    <div class="eyebrow">Week 3 · DOM + JSON + API</div>
+    <h1>Weather App</h1>
+
+    <div class="search-row">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+      <button id="locateBtn" title="Use my location">📍</button>
+    </div>
+
+    <div class="recent-row" id="recentRow"></div>
+
+    <div class="card">
+      <div class="unit-toggle">
+        <button id="unitC" class="active">°C</button>
+        <button id="unitF">°F</button>
+      </div>
+
+      <p class="state-message" id="stateMessage">Search a city to see the current weather.</p>
+
+      <div class="loading" id="loadingState">
+        <div class="spinner"></div>
+        <span>Fetching weather...</span>
+      </div>
+
+      <div class="result" id="result">
+        <div class="city-name" id="cityName"></div>
+        <div class="condition-text" id="conditionText"></div>
+
+        <div class="temp-row">
+          <img class="weather-icon" id="weatherIcon" src="" alt="" style="display:none;" />
+          <span class="emoji-icon" id="emojiIcon" style="display:none;"></span>
+          <div class="temp-value" id="tempValue"></div>
+        </div>
+
+        <div class="details-row">
+          <div class="detail">
+            <span class="detail-label">Humidity</span>
+            <span class="detail-value" id="humidityValue"></span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Feels Like</span>
+            <span class="detail-value" id="feelsLikeValue"></span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Wind</span>
+            <span class="detail-value" id="windValue"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="api-note" id="apiNote"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
